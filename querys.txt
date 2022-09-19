@@ -1,0 +1,67 @@
+creacion de las tablas
+
+CREATE TABLE Sucursal (suc_id INTEGER(2) PRIMARY KEY NOT NULL, suc_nombre TEXT VARCHAR(20), direccion TEXT VARCHAR(50), regional TEXT VARCHAR(50));
+CREATE TABLE Sector (sector_id INTEGER(2) PRIMARY KEY NOT NULL, sector_nombre TEXT VARCHAR(40));
+CREATE TABLE Usuarios (usuario_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, suc_id INTEGER REFERENCES Sucursal (suc_id), usuario_nombre TEXT  VARCHAR(30) collate nocase, puesto TEXT VARCHAR(20), interno INT VARCHAR(10),email TEXT VARCHAR(35),sector_id INTEGER REFERENCES Sector (sector_id));
+
+
+----------------------------------------
+insert SUCURSAL:
+
+insert into Sucursal (suc_id, suc_nombre, direccion) values (99,"Administracion central","Libertador 6350");
+----
+
+INSERT SECTOR:
+
+insert into Sector (sector_id, sector_nombre,suc_id) values (1,"Sistemas");
+-----
+
+----
+
+insert USUARIOS:
+
+insert into Usuarios (suc_id, usuario_nombre, puesto,interno,email,sector_id) values (99,"Federico Gonzalez","HelpDesk",513,"fgonzalez@vital.com.ar",1);
+
+----------------------------------
+
+SELECT
+
+
+
+
+
+
+
+
+
+
+*sacar del der:
+interno de sector
+
+
+
+--Sucursales--
+
+
+"Administracion Central": 200,
+"San Justo":203,
+"Burzaco":202,
+"Moreno":206, 
+"Laferrere":201,
+"Malvinas":207,
+"Tronador":208,
+"Abasto":204,
+"Quilmes":209, 
+"La Plata": 213,
+"Loma Hermosa": 214,
+"El Talar":215,
+"Avellaneda":216,
+"Posadas":217,
+"Resistencia":218,
+"Neuquen":219,
+"Santa Fe":220,
+"Mar del Plata":221,
+"Bahia Blanca":222, 
+"Pilar": 223, 
+"Salta": 224,      
+"Call Center":1500 
